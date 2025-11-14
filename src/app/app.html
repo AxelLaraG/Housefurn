@@ -17,38 +17,79 @@
       <p class="description">Nuestras piezas más queridas, perfectas para ti.</p>
     </div>
 
-    <div class="product-grid">
-      <app-product-card
-        name="Mueble A"
-        [price]="85"
-        image="TestData/MuebleA.png"
-        [rating]="5.0"
-        badge="NUEVO!"
-      ></app-product-card>
+    <div class="carousel-wrapper">
+      <div
+        #productGrid
+        class="product-grid"
+      >
+        <app-product-card
+          name="Mueble A"
+          [price]="85"
+          image="TestData/MuebleA.png"
+          [rating]="5.0"
+          badge="NUEVO!"
+        ></app-product-card>
 
-      <app-product-card
-        name="Mueble B"
-        [price]="85"
-        image="TestData/MuebleB.png"
-        [rating]="4.5"
-      ></app-product-card>
+        <app-product-card
+          name="Mueble B"
+          [price]="85"
+          image="TestData/MuebleB.png"
+          [rating]="4.5"
+        ></app-product-card>
 
-      <app-product-card
-        name="Mueble C"
-        [price]="85"
-        image=""
-        [rating]="5.0"
-        badge="NUEVO!"
-      ></app-product-card>
+        <app-product-card
+          name="Mueble C"
+          [price]="85"
+          image=""
+          [rating]="5.0"
+          badge="NUEVO!"
+        ></app-product-card>
 
-      <app-product-card
-        name="Mueble D"
-        [price]="85"
-        image=""
-        [rating]="5.0"
-        badge="NUEVO!"
-      ></app-product-card>
+        <app-product-card
+          name="Mueble D"
+          [price]="85"
+          image=""
+          [rating]="5.0"
+          badge="NUEVO!"
+        ></app-product-card>
 
+        <app-product-card
+          name="Mueble E"
+          [price]="85"
+          image="TestData/MuebleA.png"
+          [rating]="5.0"
+          badge="NUEVO!"
+        ></app-product-card>
+
+        <app-product-card
+          name="Mueble F"
+          [price]="85"
+          image="TestData/MuebleB.png"
+          [rating]="4.5"
+        ></app-product-card>
+
+        <app-product-card
+          name="Mueble G"
+          [price]="85"
+          image=""
+          [rating]="5.0"
+          badge="NUEVO!"
+        ></app-product-card>
+
+        <app-product-card
+          name="Mueble H"
+          [price]="85"
+          image=""
+          [rating]="5.0"
+          badge="NUEVO!"
+        ></app-product-card>
+      </div>
+
+      
+      <button class="carousel-button prev" (click)="scrollCarousel('left')">&lt;</button>
+      
+      <button class="carousel-button next" (click)="scrollCarousel('right')">&gt;</button>
+      
     </div>
   </section>
 </main>

@@ -11,6 +11,7 @@
   
   <div class="product-details">
     <p class="product-name">{{ name }}</p>
+    <span class="price">${{ price.toFixed(2) }}</span>
     
     <div class="product-meta">
       @if (rating){
@@ -18,7 +19,7 @@
           {{ getStarRating(rating) }} {{ rating.toFixed(1) }}
         </span>
       }
-      <span class="price">${{ price.toFixed(2) }}</span>
+      
       <button class="add-to-cart">AÑADIR AL CARRITO</button>
     </div>
   </div>

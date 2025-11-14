@@ -13,6 +13,7 @@
     align-items: center;
     margin-bottom: 1.2rem;
     
+    
     img {
       height: 50px;
       width: auto;
@@ -101,15 +102,24 @@
   }
 }
 
+.carousel-wrapper {
+  grid-column: 2 / 3;
+  position: relative;
+}
+
 .product-grid {
-  grid-column: 2 / 5;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 1rem;
+  gap: 0;
   padding: 2rem 1rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.product-grid::-webkit-scrollbar {
+  display: none;
 }
 
 app-product-card:nth-child(even),
@@ -122,8 +132,37 @@ app-product-card:nth-child(odd):not(first-child){
 }
 
 app-product-card {
-  flex: 0 0 100;
-  scroll-snap-align: center;
+  flex: 0 0 25%;
+  scroll-snap-align: start;
+  height: auto;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  line-height: 1;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.carousel-button.prev {
+  left: 0.5rem;
+}
+
+.carousel-button.next {
+  right: 0.5rem;
 }
 
 .empty-card {
