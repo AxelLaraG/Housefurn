@@ -1,14 +1,58 @@
 <header class="header">
   <div class="logo">
-    <img src="logoST.png" alt="Housefurn" />
+    <img src="logos/logoST.png" alt="Housefurn" />
   </div>
-  <div class="nav">
-    
-  </div>
+  <nav class="nav">
+    <a href="#">Tiendas</a>
+    <a href="#">Colecciones</a>
+    <a href="#">Acerca de</a>
+    <a href="#">Contacto</a>
+  </nav>
 </header>
 
+<main>
+  <section class="best-sellers">
+    <div class="intro">
+      <h2 class="title">BEST-SELLERS</h2>
+      <p class="description">Nuestras piezas más queridas, perfectas para ti.</p>
+    </div>
 
+    <div class="product-grid">
+      <app-product-card
+        name="Mueble A"
+        [price]="85"
+        image="TestData/MuebleA.png"
+        [rating]="5.0"
+        badge="NUEVO!"
+      ></app-product-card>
+
+      <app-product-card
+        name="Mueble B"
+        [price]="85"
+        image="TestData/MuebleB.png"
+        [rating]="4.5"
+      ></app-product-card>
+
+      <app-product-card
+        name="Mueble C"
+        [price]="85"
+        image=""
+        [rating]="5.0"
+        badge="NUEVO!"
+      ></app-product-card>
+
+      <app-product-card
+        name="Mueble D"
+        [price]="85"
+        image=""
+        [rating]="5.0"
+        badge="NUEVO!"
+      ></app-product-card>
+
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
-  <p>@ 2025 HOUSEPOS. Inspired by Houseplant.</p>
+  <p>&#64; 2025 HOUSEFURN. Inspired by Houseplant.</p>
 </footer>
