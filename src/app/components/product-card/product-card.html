@@ -1,0 +1,25 @@
+<div class="product-card">
+  @if(badge){
+    <div class="badge">{{ badge }}</div>
+  }@else{
+    <div class="no-badge">BEST!</div>
+  }
+  
+  <div class="image-container">
+    <img [src]="image" [alt]="name" class="product-image" />
+  </div>
+  
+  <div class="product-details">
+    <p class="product-name">{{ name }}</p>
+    
+    <div class="product-meta">
+      @if (rating){
+        <span class="rating">
+          {{ getStarRating(rating) }} {{ rating.toFixed(1) }}
+        </span>
+      }
+      <span class="price">${{ price.toFixed(2) }}</span>
+      <button class="add-to-cart">AÑADIR AL CARRITO</button>
+    </div>
+  </div>
+</div>
