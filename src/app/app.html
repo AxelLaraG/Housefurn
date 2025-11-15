@@ -11,8 +11,6 @@
 </header>
 
 <main>
-
-  
   <section class="best-sellers">
     <div class="intro">
       <h2 class="title">BEST-SELLERS</h2>
@@ -20,10 +18,7 @@
     </div>
 
     <div class="carousel-wrapper">
-      <div
-        #productGrid
-        class="product-grid"
-      >
+      <div #productGrid class="product-grid">
         <app-product-card
           name="Mueble A"
           [price]="85"
@@ -42,7 +37,7 @@
         <app-product-card
           name="Mueble C"
           [price]="85"
-          image=""
+          image="TestData/MuebleA.png"
           [rating]="5.0"
           badge="NUEVO!"
         ></app-product-card>
@@ -50,9 +45,8 @@
         <app-product-card
           name="Mueble D"
           [price]="85"
-          image=""
+          image="TestData/MuebleB.png"
           [rating]="5.0"
-          badge="NUEVO!"
         ></app-product-card>
 
         <app-product-card
@@ -73,7 +67,7 @@
         <app-product-card
           name="Mueble G"
           [price]="85"
-          image=""
+          image="TestData/MuebleA.png"
           [rating]="5.0"
           badge="NUEVO!"
         ></app-product-card>
@@ -81,18 +75,21 @@
         <app-product-card
           name="Mueble H"
           [price]="85"
-          image=""
+          image="TestData/MuebleB.png"
           [rating]="5.0"
-          badge="NUEVO!"
         ></app-product-card>
       </div>
 
-      
       <button class="carousel-button prev" (click)="scrollCarousel('left')">&lt;</button>
-      
+
       <button class="carousel-button next" (click)="scrollCarousel('right')">&gt;</button>
-      
     </div>
+  </section>
+
+  <section class="store-grid-wrapper">
+    @for (store of stores; track store.name) {
+      <app-store-card [store]="store"></app-store-card>
+    }
   </section>
 </main>
 

@@ -1,10 +1,11 @@
 import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductCard } from './components/product-card/product-card';
+import { Store, StoreCard } from './components/store-card/store-card';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProductCard],
+  imports: [RouterOutlet, ProductCard, StoreCard],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -12,6 +13,28 @@ export class App {
   protected readonly title = signal('frontend');
 
   @ViewChild('productGrid') productGridRef!: ElementRef;
+
+  //Test Data
+  protected readonly stores: Store[] = [
+    {
+      name: 'Regalos para Amigos',
+      image: 'TestData/TiendaA.jpg',
+      description: 'Piezas pensadas para la convivencia y el buen diseño.',
+      link: '#',
+    },
+    {
+      name: 'Mobiliario Premium',
+      image: 'TestData/TiendaB.jpg',
+      description: 'Muebles de alta calidad y diseño moderno.',
+      link: '#',
+    },
+    {
+      name: 'Iluminación y Decoración',
+      image: 'TestData/TiendaC.jpg',
+      description: 'Detalles que transforman cualquier espacio.',
+      link: '#',
+    },
+  ];
 
   scrollCarousel(direction: 'left' | 'right'): void {
     const element = this.productGridRef.nativeElement;
