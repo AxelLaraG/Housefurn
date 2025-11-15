@@ -5,8 +5,8 @@
   <nav class="nav">
     <a href="#">Tiendas</a>
     <a href="#">Colecciones</a>
-    <a href="#">Acerca de</a>
-    <a href="#">Contacto</a>
+    <a href="#">Buscar</a>
+    <a href="#">Explorar</a>
   </nav>
 </header>
 
@@ -32,6 +32,7 @@
           [price]="85"
           image="TestData/MuebleB.png"
           [rating]="4.5"
+          badge="BEST!"
         ></app-product-card>
 
         <app-product-card
@@ -47,6 +48,7 @@
           [price]="85"
           image="TestData/MuebleB.png"
           [rating]="5.0"
+          badge="BEST!"
         ></app-product-card>
 
         <app-product-card
@@ -62,6 +64,7 @@
           [price]="85"
           image="TestData/MuebleB.png"
           [rating]="4.5"
+          badge="BEST!"
         ></app-product-card>
 
         <app-product-card
@@ -77,6 +80,7 @@
           [price]="85"
           image="TestData/MuebleB.png"
           [rating]="5.0"
+          badge="BEST!"
         ></app-product-card>
       </div>
 
@@ -88,8 +92,25 @@
 
   <section class="store-grid-wrapper">
     @for (store of stores; track store.name) {
-      <app-store-card [store]="store"></app-store-card>
+    <app-store-card [store]="store"></app-store-card>
     }
+  </section>
+
+  <section class="shop-grid-wrapper">
+    <div class="intro">
+      <h2 class="title">TODA LA TIENDA</h2>
+    </div>
+    <div class="product-grid-static">
+      @for (product of products; track product.name) {
+      <app-product-card
+        [name]="product.name"
+        [price]="product.price"
+        [image]="product.image"
+        [rating]="product.rating"
+        [badge]="product.badge"
+      ></app-product-card>
+      }
+    </div>
   </section>
 </main>
 

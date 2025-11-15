@@ -185,6 +185,25 @@ app-product-card {
   }
 }
 
+.featured-products {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  background-color: var(--color-bg);
+}
+
+.featured-products .intro {
+  background-color: #f7f3ed;
+  grid-column: 1 / 2;
+}
+
+.product-grid-static {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  padding: 2rem 1rem;
+}
+
 @media (max-width: 1400px) {
   .header {
     padding: 2rem 1.5rem;

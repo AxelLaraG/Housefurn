@@ -1,6 +1,14 @@
 import { Component,Input, signal, Signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+export interface Product {
+  name: string;
+  price: number;
+  image: string;
+  rating: number | null;
+  badge: string | null;
+}
+
 @Component({
   selector: 'app-product-card',
   standalone: true,

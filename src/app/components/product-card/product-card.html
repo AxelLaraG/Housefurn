@@ -1,25 +1,23 @@
 <div class="product-card">
-  @if(badge){
-    <div class="badge">{{ badge }}</div>
-  }@else{
-    <div class="no-badge">BEST!</div>
-  }
-  
+  @if(badge === "NUEVO!"){
+  <div class="new-badge">{{ badge }}</div>
+  }@else{ @if(badge=== "BEST!"){
+  <div class="best-badge">BEST!</div>
+  }}
+
   <div class="image-container">
     <img [src]="image" [alt]="name" class="product-image" />
   </div>
-  
+
   <div class="product-details">
     <p class="product-name">{{ name }}</p>
     <span class="price">${{ price.toFixed(2) }}</span>
-    
+
     <div class="product-meta">
       @if (rating){
-        <span class="rating">
-          {{ getStarRating(rating) }} {{ rating.toFixed(1) }}
-        </span>
+      <span class="rating"> {{ getStarRating(rating) }} {{ rating.toFixed(1) }} </span>
       }
-      
+
       <button class="add-to-cart">AÑADIR AL CARRITO</button>
     </div>
   </div>
