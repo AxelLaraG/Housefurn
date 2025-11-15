@@ -1,7 +1,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 4%;
   border-left: 1px solid rgba(28, 27, 26, 0.1);
   height: 100%;
   
@@ -62,14 +62,13 @@
     .rating {
       color: var(--color-text);
       font-size: 0.8rem;
-      margin-right: 2rem;
+      margin-right: 1rem;
     }
     
     .price {
       font-size: 0.9rem;
       font-weight: 600;
       margin-left: 0.5rem;
-      margin-right: 1rem;
     }
     
     .add-to-cart {

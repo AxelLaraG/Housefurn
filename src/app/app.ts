@@ -18,7 +18,7 @@ export class App {
     const cardWidth = element.clientWidth / 4;
     const scrollAmount = cardWidth;
     const maxScroll = element.scrollWidth - element.clientWidth;
-    const buffer = 5;
+    const buffer = 20;
 
     if (direction === 'right') {
       if (element.scrollLeft >= maxScroll - buffer) {
@@ -27,7 +27,7 @@ export class App {
         element.scrollLeft += scrollAmount;
       }
     } else {
-      if (element.scrollLeft <= 16) {
+      if (element.scrollLeft <= buffer) {
         element.scrollLeft = maxScroll;
       } else {
         element.scrollLeft -= scrollAmount;
